@@ -1,3 +1,39 @@
+/*General Styles*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4rem;
+  font-weight:600;
+}
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+#welcome {
+  background-color:#2c8e0f;
+  color:white;
+  height:400px;
+}
+
 #map {
-  height:180px;
+  height:500px;
+}
+
+#environment {
+  background:"assets/symphony.png";
+  height:500px;
 }
