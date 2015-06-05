@@ -4,6 +4,11 @@ html {
     box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *:before,
 *:after {
@@ -14,13 +19,6 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 4rem;
   font-weight:600;
-}
-
-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right:20px;
-  padding-left:20px;
 }
 
 #welcome {
@@ -36,4 +34,5 @@ section {
 #environment {
   background:"assets/symphony.png";
   height:500px;
+  background-color:#419926;
 }
