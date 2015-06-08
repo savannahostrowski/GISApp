@@ -6,9 +6,22 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/mapStyles.css">
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+  <script src="js/jquery-2.1.3.min.js"></script>
+
 </head>
 
 <body>
+  <!--Menu bar-->
+  <div id="bar">
+  <div id="slider"></div>
+    <a alt="1" class = "menuItem" href ="#about">About</a>
+    <a alt="2" class = "menuItem" href ="#map">Map</a>
+    <a alt="3" class = "menuItem" href ="#environment">Environment</a>
+    <a alt="4" class = "menuItem" href ="#economy">Economy</a>
+    <a alt="5" class = "menuItem" href ="#society">Society</a>
+  </div>
   <!-- Welcome to our web app -->
   <section id="welcome">
     <h1>So what about sustainable development...?</h1>
@@ -26,5 +39,17 @@
   <section id="society">
   </section>
   <script src="js/map.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".menuItem").hover(function(){
+      var pos=$(this).attr('alt');
+   $( "#slider" ).stop().animate({
+      marginLeft: 150*(pos-1),
+    }, 300)
+    });
+  });
+  </script>
+
 </body>
 </html>
