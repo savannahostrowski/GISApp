@@ -148,15 +148,12 @@ ul {
 }
 
 #map {
-  height:200px;
+  height:100vh;
 }
 /* PROJECTS
 -----------------------------------------*/
 
-.projects {
-    text-align: center;
-    background: url('../images/tile2.png');
-}
+
 
 .projectsub {
     background-color: black;
