@@ -1,0 +1,33 @@
+{
+  "name": "typeout",
+  "version": "0.7.0",
+  "authors": [
+    "Connor Atherton <c.liam.atherton@gmail.com>"
+  ],
+  "description": "Type and retype text in the browser.",
+  "main": "typeout.min.js",
+  "keywords": [
+    "browser",
+    "type",
+    "typeout"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ConnorAtherton/typeout",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.7.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.7.0",
+    "commit": "90a43b0261fd909b433fae60a955b082576abc78"
+  },
+  "_source": "git://github.com/ConnorAtherton/typeout.git",
+  "_target": "~0.7.0",
+  "_originalSource": "typeout",
+  "_direct": true
+}

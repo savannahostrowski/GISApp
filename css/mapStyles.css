@@ -1,8 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-a[class*="entypo-"]:before {
-    font-family: 'entypo', sans-serif;
-}
-
 html {
     box-sizing: border-box;
 }
@@ -23,7 +18,7 @@ body {
 }
 
 h1 {
-    font-size: 9rem;
+    font-size: 7.5rem;
     font-weight: 200;
     margin-top: 20px;
     font-family: 'Raleway', sans-serif;
@@ -86,14 +81,14 @@ ul {
 }
 
 .header {
-    padding-top: 85px;
+    padding-top: 120px;
     padding-bottom: 85px;
 }
 
 .accent {
     color:white;
     font-weight: 400;
-    font-size: 9rem;
+    font-size: 7.5rem;
 }
 
 .banner h1 {
@@ -152,34 +147,8 @@ ul {
   color:white;
 }
 
-table {
-    margin-left: auto;
-    margin-right: auto;
-    color: black;
-    padding-left: 100px;
-    font-weight: 500;
-    font-family: 'Raleway', sans-serif;
-    text-align: left;
-}
-
-td {
-    padding: 30px;
-}
-
-.icon-javascript {
-    font-size: 5rem;
-}
-
-.icon-html {
-    font-size: 5rem;
-}
-
-.icon-css {
-    font-size: 5rem;
-}
-
-.icon-python {
-    font-size: 5rem;
+#map {
+  height:200px;
 }
 /* PROJECTS
 -----------------------------------------*/
