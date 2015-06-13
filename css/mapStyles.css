@@ -155,6 +155,15 @@ ul {
   margin-left:auto;
   margin-right:auto;
 }
+
+.range {
+  position:absolute;
+  width:100%;
+}
+
+.leaflet-top .leaflet-control-zoom {
+  top:100px;
+}
 /* PROJECTS
 -----------------------------------------*/
 
