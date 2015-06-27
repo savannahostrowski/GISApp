@@ -29,7 +29,6 @@ var customLayer = L.geoJson(null, {
 });
 var runLayer = omnivore.kml('/mapbox.js/assets/data/line.kml', null, customLayer)
     .on('ready', function() {
-        // http://leafletjs.com/reference.html#map-fitbounds
         map.fitBounds(runLayer.getBounds());
     })
     .addTo(map);
