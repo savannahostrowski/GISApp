@@ -8,7 +8,7 @@ function setup (geoJ) {
   map.legendControl.addLegend(document.getElementById('legend').innerHTML);
   L.geoJson(geoJ, {
     style: function (feature) {
-      switch (feature.properties.final_ra_1) {
+      switch (feature.properties.FINAL_RANK) {
         case 1: return {
           color: '#00FF00',
           fill: '#00FF00',
@@ -89,7 +89,7 @@ function setup (geoJ) {
   clip();
 }
 
-$.getJSON('1996final_1.geojson', function (data) {
+$.getJSON('1996final.geojson', function (data) {
   var geoJson1996 = [data];
   // Add features to the map
   setup(geoJson1996);
