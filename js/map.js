@@ -1,11 +1,16 @@
-L.mapbox.accessToken = 'pk.eyJ1Ijoic29zdHJvd3MiLCJhIjoiYzQzZmM5N2E4MmZiMDFjMWU1ZmE3N2M0M2E2NTllOWUifQ.14jVMAgcp0EglUIjzdyA8w';
-var map = L.mapbox.map('map', 'mapbox.outdoors', {
-  maxZoom: 19,
-  minZoom: 11
-});
+var map = L.map('map', {
+  renderer: L.svg()
+}).setView([43.399657, -80.442887], 11);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    id: 'sostrows.7faa2b2a',
+    accessToken: 'pk.eyJ1Ijoic29zdHJvd3MiLCJhIjoiYzQzZmM5N2E4MmZiMDFjMWU1ZmE3N2M0M2E2NTllOWUifQ.14jVMAgcp0EglUIjzdyA8w'
+}).addTo(map);
+
 
 function setup (geoJ) {
-  map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+  // map.legendControl.addLegend(document.getElementById('legend').innerHTML);
   L.geoJson(geoJ, {
     style: function (feature) {
       switch (feature.properties.FINAL_RANK) {
@@ -64,7 +69,6 @@ function setup (geoJ) {
   }).addTo(map);
 
   var overlayPane = map.getPanes().overlayPane;
-  var overlay = L.mapbox.tileLayer('mapbox.comic').addTo(map);
 
   function clip() {
     var nw = map.containerPointToLayerPoint([0, 0]),
@@ -73,18 +77,16 @@ function setup (geoJ) {
 
 
     overlayPane.style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
-    overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
   }
 
   var range = document.getElementById('range');
   range['oninput' in range ? 'oninput' : 'onchange'] = clip;
   map.on('move', clip);
-  map.setView([43.399657, -80.442887], 11);
 
   //schools
-  L.marker([43.47221825, -80.54241289]).bindLabel('University of Waterloo').addTo(map);
-  L.marker([43.473664, -80.528207]).bindLabel('Wilfrid Laurier University').addTo(map);
-  L.marker([43.478916, -80.517904]).bindLabel('Conestoga College').addTo(map);
+  L.marker([43.47221825, -80.54241289]).bindPopup('University of Waterloo').addTo(map);
+  L.marker([43.473664, -80.528207]).bindPopup('Wilfrid Laurier University').addTo(map);
+  L.marker([43.478916, -80.517904]).bindPopup('Conestoga College').addTo(map);
 
   clip();
 }
@@ -94,3 +96,6 @@ $.getJSON('1996final.geojson', function (data) {
   // Add features to the map
   setup(geoJson1996);
 });
+
+  var pane2011 = map.createPane('pane2011', map.getPanes().mapPane);
+
