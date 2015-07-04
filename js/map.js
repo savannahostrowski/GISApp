@@ -93,11 +93,16 @@ function setup (geoJ, paneName) {
 
   clip();
 }
-var pane1996 = map.createPane('pane1996');
-$.getJSON('2011final.geojson', function (data) {
+$.getJSON('1996final.geojson', function (data) {
   var geoJson1996 = [data];
+  setup(geoJson1996);
+});
+
+var pane2011 = map.createPane('pane2011');
+$.getJSON('2011final.geojson', function (data) {
+  var geoJson2011 = [data];
   // Add features to the map
-  setup(geoJson1996, 'pane1996');
+  setup(geoJson2011, 'pane2011');
 });
 
 
