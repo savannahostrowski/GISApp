@@ -24,7 +24,7 @@
             <h1>So what about</h1>
             <span class="accent typeout"></span>
         </div>
-        <span class="arrow arrow-down"></span>
+        <span class="scrolldown">Scroll down to check out how Waterloo region has changed!</span>
     </div>
     <section id="about" class="about container grayscale">
         <div class="aboutbox">
@@ -70,6 +70,9 @@ $(document).ready(function() {
         strings: ["sustainable development?^1000", "the environment?^1000", "the economy?^1000", "society?^1000", "sustainable development?^1000"],
         typeSpeed: 50,
         cursorChar: "",
+    });
+    $('.scrolldown').delay(16500).fadeIn("slow", function () {
+      //faded in
     });
   });
 </script>
