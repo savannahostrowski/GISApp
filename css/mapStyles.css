@@ -40,6 +40,7 @@ h3 {
   color:#2c8e0f;
 
 }
+
 .container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -131,14 +132,13 @@ ul {
 }
 
 .about p a {
-    text-decoration: underline;
-    color: #936278;
+    color: #2c8e0f;
     font-weight: bold;
     font-size: 1rem;
 }
 
 .about p a:hover {
-    color: #936278;
+    color: #2c8e0f;
     text-decoration: underline;
 }
 /* MAP
@@ -167,16 +167,18 @@ ul {
   color:black;
 }
 
-.legend label,
-.legend span {
-  display:block;
-  float:left;
-  height:15px;
-  width:20%;
-  text-align:center;
-  font-size:9px;
-  color:#808080;
-  }
+.legend {
+    line-height: 18px;
+    color: black;
+    background-color: white;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
 /* findings --------------------*/
 
 .findings {
