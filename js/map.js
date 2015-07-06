@@ -20,8 +20,6 @@ range['oninput' in range ? 'oninput' : 'onchange'] = clip;
 map.on('move', clip);
 map.setView([43.4643, -80.5], 12);
 
-clip();
-
 var myLayer = L.mapbox.featureLayer().addTo(map);
 var geoJson = [
   {
@@ -42,3 +40,5 @@ myLayer.on('layeradd', function(e) {
 });
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
+
+clip();
