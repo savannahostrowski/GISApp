@@ -10,62 +10,62 @@ function setup (geoJ) {
     style: function (feature) {
       switch (feature.properties.final_ra_1) {
         case 1: return {
-          color: '#336600',
-          fill: '#336600',
+          color: '#00FF00',
+          fill: '#00FF00',
           fillOpacity: 1.0,
         };
         break;
         case 2: return {
-          color: '#007d06',
-          fill: '#007d06',
+          color: '#55FF00',
+          fill: '#55FF00',
           fillOpacity: 1.0
         };
         break;
         case 3: return {
-          color: '#005b04',
-          fill: '#005b04',
+          color: '#88FF00',
+          fill: '#88FF00',
           fillOpacity: 1.0
         };
         break;
         case 4: return {
-          color: '#d2fa1a',
-          fill: '#d2fa1a',
+          color: '#BBFF00',
+          fill: '#BBFF00',
           fillOpacity: 1.0
         };
         break;
         case 5: return {
-          color: '#f8e614',
-          fill: '#f8e614',
+          color: '#BBFF00',
+          fill: '#BBFF00',
           fillOpacity: 1.0
         };
         break;
         case 6: return {
-          color: '#FFA500',
-          fill: '#FFA500',
+          color: '#FFDD00',
+          fill: '#FFDD00',
           fillOpacity: 1.0
         };
         break;
         case 7: return {
-          color: '#FF8C00',
-          fill: '#FF8C00',
+          color: '#FFCC00',
+          fill: '#FFCC00',
           fillOpacity: 1.0
         };
         break;
         case 8: return {
-          color: '#FF0000',
-          fill: '#FF0000',
+          color: '#FF8800',
+          fill: '#FF8800',
           fillOpacity: 1.0
         };
         break;
         case 9: return {
-          color: '#C00000',
-          fill: '#C00000',
+          color: '#FF4400',
+          fill: '#FF4400',
           fillOpacity: 1.0
         };
         break;
         case 10: return {
-          color: '#780000',
-          fill: '#780000',
+          color: '#FF0000',
+          fill: '#FF0000',
           fillOpacity: 1.0
         };
         break;
@@ -74,7 +74,7 @@ function setup (geoJ) {
   }).addTo(map);
 
   var overlayPane = map.getPanes().overlayPane;
-  var overlay = L.mapbox.tileLayer('mapbox.comic').addTo(map);
+  var overlay = L.mapbox.tileLayer('mapbox.outdoors').addTo(map);
 
   function clip() {
     var nw = map.containerPointToLayerPoint([0, 0]),
@@ -89,7 +89,12 @@ function setup (geoJ) {
   var range = document.getElementById('range');
   range['oninput' in range ? 'oninput' : 'onchange'] = clip;
   map.on('move', clip);
-  map.setView([43.4643, -80.5], 11);
+  map.setView([43.399657, -80.442887], 11);
+
+  //schools
+  L.marker([43.47221825, -80.54241289]).bindLabel('University of Waterloo').addTo(map);
+  L.marker([43.473664, -80.528207]).bindLabel('Wilfrid Laurier University').addTo(map);
+  L.marker([43.478916, -80.517904]).bindLabel('Conestoga College').addTo(map);
 
   clip();
 }
