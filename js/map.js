@@ -5,6 +5,7 @@ var map = L.mapbox.map('map', 'mapbox.outdoors', {
 });
 
 function setup (geoJ) {
+  map.legendControl.addLegend(document.getElementById('legend').innerHTML);
   L.geoJson(geoJ, {
     style: function (feature) {
       switch (feature.properties.final_ra_1) {
