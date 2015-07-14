@@ -14,61 +14,51 @@ function setup (geoJ) {
           fill: '#00FF00',
           fillOpacity: 1.0,
         };
-        break;
         case 2: return {
           color: '#55FF00',
           fill: '#55FF00',
           fillOpacity: 1.0
         };
-        break;
         case 3: return {
           color: '#88FF00',
           fill: '#88FF00',
           fillOpacity: 1.0
         };
-        break;
         case 4: return {
           color: '#BBFF00',
           fill: '#BBFF00',
           fillOpacity: 1.0
         };
-        break;
         case 5: return {
-          color: '#BBFF00',
-          fill: '#BBFF00',
+          color: '#FFFF00',
+          fill: '#FFFF00',
           fillOpacity: 1.0
         };
-        break;
         case 6: return {
           color: '#FFDD00',
           fill: '#FFDD00',
           fillOpacity: 1.0
         };
-        break;
         case 7: return {
           color: '#FFCC00',
           fill: '#FFCC00',
           fillOpacity: 1.0
         };
-        break;
         case 8: return {
           color: '#FF8800',
           fill: '#FF8800',
           fillOpacity: 1.0
         };
-        break;
         case 9: return {
           color: '#FF4400',
           fill: '#FF4400',
           fillOpacity: 1.0
         };
-        break;
         case 10: return {
           color: '#FF0000',
           fill: '#FF0000',
           fillOpacity: 1.0
         };
-        break;
       }
     }
   }).addTo(map);
