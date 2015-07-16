@@ -64,7 +64,7 @@ function setup (geoJ) {
   }).addTo(map);
 
   var overlayPane = map.getPanes().overlayPane;
-  var overlay = L.mapbox.tileLayer('mapbox.outdoors').addTo(map);
+  var overlay = L.mapbox.tileLayer('mapbox.comic').addTo(map);
 
   function clip() {
     var nw = map.containerPointToLayerPoint([0, 0]),
@@ -94,18 +94,3 @@ $.getJSON('1996final_1.geojson', function (data) {
   // Add features to the map
   setup(geoJson1996);
 });
-
-$.getJSON('1996final_1.geojson', function (data) {
-  var geoJson2011 = [data];
-  function clip2011(geoJson2011) {
-    var nw = map.containerPointToLayerPoint([0, 0]),
-        se = map.containerPointToLayerPoint(map.getSize()),
-        clipX = nw.x + (se.x - nw.x) * range.value;
-
-
-    overlayPane.style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
-    overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
-  }
-  clip2011();
-
-})
