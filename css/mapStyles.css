@@ -167,6 +167,51 @@ ul {
   color:black;
 }
 
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:20%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+/* findings --------------------*/
+
+.findings {
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    background-attachment: fixed;
+    color: #936278;
+    height: 100%;
+    position: relative;
+    background-position: center;
+}
+.findingsbox h2 {
+  text-align: center;
+}
+.findingsbox {
+    width: 650px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.findings p a {
+    text-decoration: underline;
+    color: #936278;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.findings p a:hover {
+    color: #936278;
+    text-decoration: underline;
+}
 /* footer
 -----------------------------------------*/
 

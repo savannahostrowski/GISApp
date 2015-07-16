@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Savannah Ostrowski</title>
+    <title>Student Impact on Sustainable Development | Savannah Ostrowski</title>
     <meta name="description" content="Savannah Ostrowski is a Canadian web developer and student">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <!-- Google fonts -->
@@ -11,6 +11,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/mapStyles.css">
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+    <!--Leaflet Label -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
     <!--jQuery -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <!--JS-->
@@ -26,7 +29,7 @@
         </div>
         <span class="scrolldown">Scroll down to check out how Waterloo region has changed!</span>
     </div>
-    <section id="about" class="about container grayscale">
+    <section id="about" class="about">
         <div class="aboutbox">
             <h2>About the Project</h2>
             <p>Welcome! This is a web app designed as a final project for
@@ -52,14 +55,46 @@
     <!-- Map Section -->
     <section class="map container">
       <h2>What happened in Waterloo from 1996 to 2011?</h2>
+      <h4>On the left, the impacts of students in 1996 can be seen. On the right, the impacts of students in 2011 can be seen.</h4>
         <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'>
         </script>
+
+        <div id='legend' style='display:none;'>
+          <strong>Student Impact on Sustainable Development</strong>
+          <nav class='legend clearfix'>
+          <span style='background:#00FF00;'></span>
+          <span style='background:#55FF00;'></span>
+          <span style='background:#88FF00;'></span>
+          <span style='background:#BBFF00;'></span>
+          <span style='background:#FFFF00;'></span>
+          <label>1</label>
+          <label>2</label>
+          <label>3</label>
+          <label>4</label>
+          <label>5</label>
+          <span style='background:#FFDD00;'></span>
+          <span style='background:#FFCC00;'></span>
+          <span style='background:#FF8800;'></span>
+          <span style='background:#FF4400;'></span>
+          <span style='background:#FF0000;'></span>
+          <label>6</label>
+          <label>7</label>
+          <label>8</label>
+          <label>9</label>
+          <label>10</label>
+          <small>Source: <a href="http://www.statcan.gc.ca/">Statistics Canada</a></small>
+        </div>
         <div id="nav-ui" class="menu-ui"></nav>
         <div id ="map">
         </div>
       <input id="range" class="range" type="range" min="0" max="1.0" step="any"/>
     </section>
-
+    <section class="findings">
+      <div class="findingsbox">
+          <h2>A Short Summary of Our Findings</h2>
+          <p>We found that...</p>
+      </div>
+    </section>
     <section id="footer" class="footer container">
           <p class="copyright">&copy;2015 Savannah Ostrowski Design</p>
     </section>
