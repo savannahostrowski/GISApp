@@ -179,6 +179,13 @@ ul {
     margin-right: 8px;
     opacity: 0.7;
 }
+.leaflet-pane .leaflet-overlay-pane {
+    z-index: 10000;
+}
+
+.leaflet-pane .leaflet-marker-pane {
+    z-index: 10001;
+}
 /* findings --------------------*/
 
 .findings {
