@@ -109,35 +109,37 @@ $.getJSON('2011final.geojson', function (data) {
 
 
 function getColor(d) {
-    return d === 1 ? '#00FF00' :
-           d === 2 ? '#55FF00' :
-           d === 3 ? '#88FF00' :
-           d === 4 ? '#BBFF00' :
-           d === 5 ? '#FFFF00' :
-           d === 6 ? '#FFDD00' :
-           d === 7 ? '#FFCC00' :
-           d === 8 ? '#FF8800' :
-
-           d === 9 ? '#FF0000' :
-           d === 10 ?'#FFEDA0' :
-           ''
-}
-
-     // <span style='background:#00FF00;'></span>
-     //      <span style='background:#55FF00;'></span>
-     //      <span style='background:#88FF00;'></span>
-     //      <span style='background:#BBFF00;'></span>
-     //      <span style='background:#FFFF00;'></span>
-     //      <label>1</label>
-     //      <label>2</label>
-     //      <label>3</label>
-     //      <label>4</label>
-     //      <label>5</label>
-     //      <span style='background:#FFDD00;'></span>
-     //      <span style='background:#FFCC00;'></span>
-     //      <span style='background:#FF8800;'></span>
-     //      <span style='background:#FF4400;'></span>
-     //      <span style='background:#FF0000;'></span>
+  if (d === 1) {
+    return'#00FF00';
+  }
+  if (d === 2) {
+    return '#55FF00';
+  }
+  if (d === 3) {
+    return '#88FF00';
+  }
+  if (d === 4) {
+    return '#BBFF00';
+  }
+  if (d === 5) {
+    return '#FFFF00'; 
+  }
+  if (d === 6) {
+    return '#FFDD00';
+  }
+  if (d === 7) {
+    return '#FFCC00';
+  }
+  if (d === 8) {
+    return '#FF8800';
+  }
+  if (d === 9) {
+    return '#FF4400';
+  }
+  if (d === 10) {
+    return '#FF0000';
+  }
+};
 
 var legend = L.control({position: 'bottomright'});
 
@@ -149,11 +151,11 @@ legend.onAdd = function (map) {
 
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '<br>' : ' ');
+            '<i style="background:' + getColor(grades[i]) + '"></i> ' +
+            grades[i] + (grades[i] ? '<br>' : ' ');
     }
 
     return div;
 };
 
-// legend.addTo(map);
+legend.addTo(map);
