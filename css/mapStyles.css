@@ -252,207 +252,108 @@ ul {
 /*Media Queries*/
 
 @media (max-width: 1024px) {
+    .banner {
+        height:500px;
+    }
     .banner h1 {
-        font-size: 7rem;
+        font-size: 5rem;
     }
     .banner h2 {
         font-size: 2rem;
     }
     .accent {
-        font-size: 7rem;
+        font-size: 5rem;
     }
     .header {
         margin-bottom: -30px;
     }
 }
-
-@media (max-width: 830px) {
-    .banner h1 {
-        font-size: 7.5rem;
+@media (max-width: 1012px) {
+    .banner {
+        height:500px;
     }
-    .banner h2 {
-        font-size: 2.5rem;
+    .banner h1 {
+        font-size: 3.75rem;
+    }
+    .banner .scrolldown {
+        font-size: 1.45rem;
     }
     .accent {
-        font-size: 7.5rem;
-    }
-}
-
-@media (max-width: 775px) {
-    .banner h1 {
-        font-size: 7rem;
-    }
-    .banner h2 {
-        font-size: 2rem;
-    }
-    .accent {
-        font-size: 7rem;
-    }
-    .aboutbox {
-        width: auto;
-    }
-}
-
-@media (max-width: 740px) {
-    .banner h1 {
-        font-size: 6.5rem;
-    }
-    .banner h2 {
-        font-size: 1.75rem;
-    }
-    .accent {
-        font-size: 6.5rem;
-    }
-    .aboutbox {
-        width: auto;
-    }
-}
-
-@media (max-width: 700px) and (max-height: 400px) {
-    .banner h1 {
-        font-size: 4rem;
-    }
-    .banner h2 {
-        font-size: 1.5rem;
-    }
-    .accent {
-        font-size: 4rem;
-    }
-    #scroll {
-        margin-top: 50px;
-    }
-    #scroll {
-        margin-top: -15px;
-    }
-    #scroll.clicked {
-        margin-right: auto;
+        font-size: 3.75rem;
     }
     .header {
-        padding-top: 15px;
-        padding-bottom: 25px;
-        margin-bottom: auto;
+        margin-bottom: -30px;
     }
-    h2 {
-        font-size: 2.25rem;
+    .map h4 {
+        width:800px;
     }
-}
-
-@media (max-width: 690px) {
-    .banner h1 {
-        font-size: 6rem;
-    }
-    .banner h2 {
-        font-size: 1.75rem;
-    }
-    .accent {
-        font-size: 6rem;
-    }
-    .aboutbox {
-        width: auto;
-    }
-    .icon-javascript {
-        font-size: 4rem;
-    }
-    .icon-html {
-        font-size: 4rem;
-    }
-    .icon-css {
-        font-size: 4rem;
-    }
-    .icon-python {
-        font-size: 4rem;
-    }
-    ul {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 655px) {
-    .banner h1 {
-        font-size: 5.5rem;
-    }
-    .banner h2 {
-        font-size: 1.5rem;
-    }
-    .accent {
-        font-size: 5.5rem;
-    }
-    #scroll {
-        margin-top: 50px;
-    }
-    #scroll {
-        margin-top: auto;
-    }
-    #scroll.clicked {
+    .map .menu-ui {
+        width:800px;
         margin-right: auto;
+        margin-left:auto;
     }
 }
-
-@media (max-width: 460px) {
-    td {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 425px) {
-    .banner h1 {
-        font-size: 4.45rem;
-    }
-    .banner h2 {
-        font-size: 1.25rem;
-    }
-    .accent {
-        font-size: 4.45rem;
-    }
-}
-
-@media (max-width: 375px) {
-    .banner h1 {
-        font-size: 4.45rem;
-    }
-    .banner h2 {
-        font-size: 1.25rem;
-    }
-    .accent {
-        font-size: 4.45rem;
-    }
-}
-
-@media (max-width: 340px) {
-    .banner h1 {
-        font-size: 3.9rem;
-    }
-    .banner h2 {
-        font-size: 1.15rem;
-    }
-    .accent {
-        font-size: 3.9rem;
-    }
-}
-
-@media(max-width:310px) {
-    .icon-javascript {
-        font-size: 3rem;
-    }
-    .icon-html {
-        font-size: 3rem;
-    }
-    .icon-css {
-        font-size: 3rem;
-    }
-    .icon-python {
-        font-size: 3rem;
-    }
-    ul {
-        font-size: 0.9rem;
-    }
+@media (max-width: 820px) {
     h2 {
         font-size: 2.5rem;
     }
+    .map h4 {
+        width:700px;
+    }
+    .map .menu-ui {
+        width:700px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+}
+@media (max-width: 774px) {
     .banner h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    .banner .scrolldown {
+        font-size: 1.2rem;
     }
     .accent {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
+}
+@media (max-width: 715px) {
+    .map h4 {
+        width:600px;
+    }
+    .map .menu-ui {
+        width:600px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+}
+@media (max-width: 675px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .aboutbox {
+        width:550px;
+    }
+}
+
+@media (max-width: 774px) {
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .banner .scrolldown {
+        font-size: 1rem;
+    }
+    .accent {
+        font-size: 2.5rem;
+    }
+    .map h4 {
+        font-size: 1rem;
+        font-weight: normal;
+        width:500px;
+    }
+    .map .menu-ui {
+        width: 500px;
+    }
+
+    
 }
