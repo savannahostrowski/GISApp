@@ -1,6 +1,6 @@
 var map = L.map('map', {
   renderer: L.svg()
-}).setView([43.399657, -80.442887], 11);
+}).setView([43.439059, -80.419618], 11);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -150,10 +150,21 @@ legend.onAdd = function (map) {
         labels = [];
 
     for (var i = 0; i < grades.length; i++) {
-        div.innerHTML +=
+        if (grades[i] === 1) {
+          div.innerHTML +=
+          '<i style="background:' + getColor(grades[i]) + '"></i> ' +
+            grades[i] + ' - low student impact' + (grades[i] ? '<br>' : ' ');
+        }
+         else if (grades[i] === 10) {
+          div.innerHTML +=
+            '<i style="background:' + getColor(grades[i]) + '"></i> ' +
+            grades[i] + ' - high student impact' + (grades[i] ? '<br>' : ' ');
+          } else {
+      div.innerHTML +=
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + (grades[i] ? '<br>' : ' ');
     }
+  }
 
     return div;
 };
