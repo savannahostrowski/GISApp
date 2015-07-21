@@ -162,11 +162,11 @@ legend.addTo(map);
 
 function style(feature) {
     return {
-        fillColor: 'none',
+        fillColor: 'grey',
         weight: 2,
         opacity: 1,
         color: 'grey',
-        fillOpacity: 1.0
+        fillOpacity: 0.1
     };
 }
 
