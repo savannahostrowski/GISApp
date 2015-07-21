@@ -211,7 +211,7 @@ hover.onAdd = function (map) {
 // method that we will use to update the control based on feature properties passed
 hover.update = function (props) {
     this._div.innerHTML = '<h5>You are currently looking at:</h5>' +  (props ?
-        '<b>' + props.PlaceName : 'Nothing! Hover over a Municipality');
+        '<b>' + props.PlaceName : 'Nothing! Hover over a municipality');
 };
 
 hover.addTo(map);
