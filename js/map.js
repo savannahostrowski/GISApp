@@ -89,8 +89,11 @@ function setup (geoJ, paneName) {
   //schools
   L.marker([43.47221825, -80.54241289]).bindPopup('University of Waterloo').addTo(map);
   L.marker([43.473664, -80.528207]).bindPopup('Wilfrid Laurier University').addTo(map);
-  L.marker([43.478916, -80.517904]).bindPopup('Conestoga College').addTo(map);
-
+  L.marker([43.478916, -80.517904]).bindPopup('Conestoga College - Waterloo Campus').addTo(map);
+  L.marker([43.3906678, -80.4027819]).bindPopup('Conestoga College - Main Campus').addTo(map);
+  L.marker([43.3582922, -80.3167776]).bindPopup('University of Waterloo School of Architecture').addTo(map);
+  L.marker([43.3868299, -80.3982499]).bindPopup('Conestoga College - Cambridge Campus').addTo(map);
+  L.marker([43.4528117, -80.4990819]).bindPopup('University of Waterloo School of Pharmacy').addTo(map);
   clip();
 }
 $.getJSON('1996final.geojson', function (data) {
@@ -159,3 +162,29 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: 'white',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+    }
+}
+
+
+var boundaries = map.createPane('boundaries');
+$.getJSON('boundaries.geojson', function (data) {
+  var boundariesdata = [data];
+  // Add features to the map
+  highlightFeature();
+  setup(boundariesdata, 'boundaries');
+
+  function resetHighlight(e) {
+    boundariesdata.resetStyle(e.target);
+}
+});

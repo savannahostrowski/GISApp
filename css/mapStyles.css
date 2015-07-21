@@ -185,10 +185,18 @@ ul {
 }
 
 .leaflet-pane .leaflet-marker-pane {
-    z-index: 10001;
+    z-index: 10002;
 }
 .leaflet-pane .leaflet-popup-pane {
-    z-index: 10001;
+    z-index: 10002;
+}
+.leaflet-pane .leaflet-boundaries-pane {
+    z-index:10001;
+}
+
+.leaflet-pane .leaflet-boundaries-pane svg g path {
+    stroke: gray;
+    fill: none;
 }
 
 .map h4 {
