@@ -108,9 +108,6 @@ $.getJSON('2011final.geojson', function (data) {
   setup(geoJson2011, 'pane2011');
 });
 
-
-
-
 function getColor(d) {
   if (d === 1) {
     return'#00FF00';
@@ -162,29 +159,71 @@ legend.onAdd = function (map) {
 };
 
 legend.addTo(map);
+
+function style(feature) {
+    return {
+        fillColor: 'none',
+        weight: 2,
+        opacity: 1,
+        color: 'grey',
+        fillOpacity: 1.0
+    };
+}
+
 function highlightFeature(e) {
     var layer = e.target;
 
     layer.setStyle({
         weight: 5,
-        color: 'white',
-        fillOpacity: 0.7
+        stroke: 'grey'
     });
 
     if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
     }
+    hover.update(layer.feature.properties);
 }
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    hover.update();
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+
+var hover = L.control();
+
+hover.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'hover'); // create a div with a class "hover"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+hover.update = function (props) {
+    this._div.innerHTML = '<h5>You are currently looking at:</h5>' +  (props ?
+        '<b>' + props.PlaceName : 'Nothing! Hover over a Municipality');
+};
+
+hover.addTo(map);
 
 
 var boundaries = map.createPane('boundaries');
 $.getJSON('boundaries.geojson', function (data) {
   var boundariesdata = [data];
   // Add features to the map
-  highlightFeature();
-  setup(boundariesdata, 'boundaries');
-
-  function resetHighlight(e) {
-    boundariesdata.resetStyle(e.target);
-}
+  geojson = L.geoJson(boundariesdata, {
+    onEachFeature: onEachFeature,
+    style: style,
+    pane: boundaries
+  }).addTo(map);
 });
