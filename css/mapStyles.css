@@ -228,16 +228,15 @@ ul {
     height: 100%;
     position: relative;
     background-position: center;
-    text-align: center;
 }
 .findings .findingsbox h2 {
-        text-align: center;
+    text-align: center;
 }
 .findingsbox {
     margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
+    max-width: 900px;
 }
 
 .findings p a {
