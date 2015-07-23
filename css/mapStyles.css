@@ -434,3 +434,8 @@ ul {
         width: 300px;
     }
 }
+@media (pointer:coarse) {
+    .map .menu-ui .hover {
+        visibility: hidden;
+    }
+}
