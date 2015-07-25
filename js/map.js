@@ -63,8 +63,6 @@ function featureColour (feature) {
   }
 }
 
-
-
 function setup (geoJ, paneName) {
   L.geoJson(geoJ, {
     pane: paneName,
@@ -96,6 +94,7 @@ function setup (geoJ, paneName) {
   L.marker([43.4528117, -80.4990819]).bindPopup('University of Waterloo School of Pharmacy').addTo(map);
   clip();
 }
+
 $.getJSON('1996final.geojson', function (data) {
   var geoJson1996 = [data];
   setup(geoJson1996);

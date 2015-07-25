@@ -214,7 +214,6 @@ ul {
 }
 
 
-
 /* findings --------------------*/
 
 .findings {
@@ -273,7 +272,7 @@ ul {
 
 @media (max-width: 1024px) {
     .banner {
-        height:500px;
+        height: 100vh;
     }
     .banner h1 {
         font-size: 5rem;
@@ -289,9 +288,6 @@ ul {
     }
 }
 @media (max-width: 1012px) {
-    .banner {
-        height:500px;
-    }
     .banner h1 {
         font-size: 3.75rem;
     }
