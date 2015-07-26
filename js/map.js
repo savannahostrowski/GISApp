@@ -159,7 +159,7 @@ legend.onAdd = function (map) {
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + ' - high student impact' + (grades[i] ? '<br>' : ' ');
           } else {
-      div.innerHTML +=
+          div.innerHTML +=
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + (grades[i] ? '<br>' : ' ');
     }
