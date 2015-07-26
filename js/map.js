@@ -76,7 +76,6 @@ function setup (geoJ, paneName) {
         se = map.containerPointToLayerPoint(map.getSize()),
         clipX = nw.x + (se.x - nw.x) * range.value;
 
-
     overlayPane.style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
   }
 
@@ -161,11 +160,10 @@ legend.onAdd = function (map) {
           div.innerHTML +=
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + (grades[i] ? '<br>' : ' ');
-    }
-  }
-
-    return div;
-};
+          }
+        }
+        return div;
+      };
 
 legend.addTo(map);
 
