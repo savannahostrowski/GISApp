@@ -153,8 +153,7 @@ legend.onAdd = function (map) {
           div.innerHTML +=
           '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + ' - low student impact' + (grades[i] ? '<br>' : ' ');
-        }
-         else if (grades[i] === 10) {
+        } else if (grades[i] === 10) {
           div.innerHTML +=
             '<i style="background:' + getColor(grades[i]) + '"></i> ' +
             grades[i] + ' - high student impact' + (grades[i] ? '<br>' : ' ');
@@ -225,7 +224,6 @@ hover.update = function (props) {
 };
 
 hover.addTo(map);
-
 
 var boundaries = map.createPane('boundaries');
 $.getJSON('boundaries.geojson', function (data) {
