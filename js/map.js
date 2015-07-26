@@ -190,6 +190,7 @@ function highlightFeature(e) {
     }
     hover.update(layer.feature.properties);
 }
+
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
     hover.update();
@@ -202,10 +203,10 @@ function onEachFeature(feature, layer) {
         click: zoomToFeature
     });
 }
+
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
-
 
 var hover = L.control();
 
